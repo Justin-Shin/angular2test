@@ -1,4 +1,4 @@
-#Angular (Angular 2, AngularJS 2.x)
+# Angular (Angular 2, AngularJS 2.x)
 I chose to look at Angular 2 because we already learned Angular, and I wanted to see the differences.  Needless to say, they are about as similar as Java and Javascript are to each other.
 
 I didn't look too much into Angular 2, but I know it is used where I work, so I wanted to look at it.
@@ -16,7 +16,7 @@ The structure is almost the same as what they give you, but I added small change
 What are 3 interview questions one might be asked about this technology?
 
 
-##To Run my example:
+## To Run my example:
 Install the angular-cli by typing `$ npm install -g angular-cli` into the terminal
 Clone down the repo and cd into the directory
 run `$ ng serve`
