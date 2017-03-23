@@ -1,3 +1,20 @@
-<h1>
-  {{title}}
-</h1>
+<section class="bookapp">
+  <header class="header">
+    <h1>Books</h1>
+    <input class="new-book" placeholder="Add a book to your library" autofocus="" [(ngModel)]="newBook.title" (keyup.enter)="addBook()">
+  </header>
+  <!-- This will inly show the array created inside book-data.service.ts actually has books -->
+  <section class="main" *ngIf="books.length > 0">
+    <ul class="book-list">
+      <!-- Similar to ng-repeat, this runs for every object returned in the array for, in this case, books -->
+      <li *ngFor="let book of books" [class.read]="book.read">
+        <div class="view">
+          Read:<input class="toggle" type="checkbox" (click)="toggleBookRead(book)" [checked]="book.read">
+          Liked:<input class="toggle" type="checkbox" (click)="toggleBookLiked(book)" [checked]="book.liked">
+          <label>{{book.title}}</label>
+          <button class="destroy" (click)="removeBook(book)">X</button>
+        </div>
+      </li>
+    </ul>
+  </section>
+</section>
